@@ -23,6 +23,6 @@ def step_impl(context):
 
 
 @then('I should check page title')
-def step_impl(context, search_result):
+def step_impl(context):
     detail_page = DetailPage(context)
     detail_page.get_title()
