@@ -9,10 +9,11 @@ class MainPage(BasePage):
     def search_field(self):
         return self.browser.find_element_by_name("q")
 
+
     def perform_search(self, search_word):
         q = self.search_field()
         q.send_keys(search_word)
         q.submit()
         WebDriverWait(self.browser, 10).until(
             ec.presence_of_element_located((By.ID, "resultStats")))
-        
+        self.browser
